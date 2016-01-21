@@ -1,15 +1,8 @@
 #!/bin/bash
 #PBS -q hotel
-<<<<<<< HEAD
 #PBS -N YHuang_MHunt_biom262_HW1
 #PBS -l nodes=10:ppn=2
 #PBS -l walltime=0:10:00
-#PBS -o tf_binding.sh.o
-#PBS -e tf_binding.sh.e
-#PBS -V
-#PBS -M yoh006@ucsd.edu 
-#PBS -m abe
-#PBS -A ucsd-train42
 
 cd ~/code/biom262-2016/weeks/week01/data
 
