@@ -25,6 +25,6 @@ bedtools getfasta -fi GRCh37.p13.chr22.fa -bed gencode.v19.annotation.chr22.tran
 #Exercise 6
 ### we used grep -F -f nfkb.paper.fasta gencode.v19.annotation.chr22.transcript.promoter.nfkb.fasta > ex6.out.fasta. Overall in looking at the data that Wong et al. generated looks pretty similar to ours. 462 of the 11mer's from their "cannonical" NFKB binding results overlay with our outputs (2442). However I could find none of the "non-cannonical" motifs they showed overlapping with our dataset. This shows why sometimes wetlab work must be done to verify bioinformatically obtained inferences.
 
+echo "Hello I am a message in standard out (stdout)"
 
-
-echo "Hello I am a message in standard error (stderr) >&2"
+echo "Hello I am a message in standard error (stderr)" >&2
