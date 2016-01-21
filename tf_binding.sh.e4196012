@@ -1,0 +1,2 @@
+/var/spool/torque/mom_priv/jobs/4196012.tscc-mgr.local.SC: line 3: syntax error near unexpected token `<<<'
+/var/spool/torque/mom_priv/jobs/4196012.tscc-mgr.local.SC: line 3: `<<<<<<< HEAD'
