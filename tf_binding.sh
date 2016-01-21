@@ -1,32 +1,25 @@
-#!/bin/csh
+#!/bin/bash
 #PBS -q hotel
-#PBS -N YHuang_MHunt_biom262_HW1
-#PBS -l nodes=10:ppn=2
-#PBS -l walltime=0:10:00
-#PBS -o tf_binding.sh.o
-#PBS -e tf_binding.sh.e
-#PBS -V
-#PBS -M yoh006@ucsd.edu 
-#PBS -m abe
-#PBS -A ucsd-train42
-cd ~/code/biom262/weeks/week01/data2
+#PBS -l nodes=2:ppn=2
+#PBS -l walltime=:00:20:00
+#PBS -N tf_binding.sh
 
-Exercise 1 
+cd ~/code/biom262-hw1/data
+module load biotools
+
+#Exercise 1
+# Filter the tf.bed file for only the NFKB 
 grep "NFKB" tf.bed > tf.nfkb.bed
 
-Exercise 2
+#Exercise 2
+#Filter only the rows of the gtf file that contain the fea
 awk '{if ($3 == "transcript")print}' gencode.v19.annotation.chr22.gtf > gencode.v19.annotation.chr22.transcript.gtf
 
-Exercise 3
-module load biotools
+#Exercise 3
+#Use bedtools to find promoters (2000 bases upstream of gene)
 bedtools flank -i gencode.v19.annotation.chr22.transcript.gtf -g hg19.genome -l 2000 -r 0 -s > gencode.v19.annotation.chr22.transcript.promoter.gtf
 
 
 
 
-
-
-
-
-echo "Hello I am a message in standard out (stdout)"
 
